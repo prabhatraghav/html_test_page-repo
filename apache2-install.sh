@@ -5,6 +5,7 @@ sudo service apache2 start
 cd /var/www/html
 sudo mv index.html bckup-index.html
 sudo wget https://raw.githubusercontent.com/prabhatraghav/html_test_page-repo/main/homepage/index.html
+sudo wget https://raw.githubusercontent.com/prabhatraghav/html_test_page-repo/main/homepage/home.html
 sudo wget https://raw.githubusercontent.com/prabhatraghav/html_test_page-repo/main/homepage/style.css
 sudo wget https://raw.githubusercontent.com/prabhatraghav/html_test_page-repo/main/mediaplayer/mediaplayer.html
 sudo wget https://raw.githubusercontent.com/prabhatraghav/html_test_page-repo/main/mediaplayer/media-player.css
