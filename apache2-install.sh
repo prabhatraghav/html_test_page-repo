@@ -3,7 +3,7 @@ sudo apt update -y
 sudo apt install apache2 -y
 sudo service apache2 start
 cd /var/www/html
-sudo rm -r index.html
+sudo mv index.html bckup-index.html
 sudo wget https://raw.githubusercontent.com/prabhatraghav/html_test_page-repo/main/homepage/index.html
 sudo wget https://raw.githubusercontent.com/prabhatraghav/html_test_page-repo/main/homepage/style.css
 sudo wget https://raw.githubusercontent.com/prabhatraghav/html_test_page-repo/main/mediaplayer/mediaplayer.html
