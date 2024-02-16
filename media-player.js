@@ -10,50 +10,57 @@ document.addEventListener('DOMContentLoaded', function () {
     const youtubeButton = document.getElementById('youtube-button');
 
     audioFileInput.addEventListener('change', function () {
-        const file = audioFileInput.files[0];
-        const objectURL = URL.createObjectURL(file);
-        audioPlayer.src = objectURL;
-        audioPlayer.play();
+        playAudioFromFile(audioFileInput.files[0]);
     });
 
     audioUrlButton.addEventListener('click', function () {
         const audioUrl = prompt("Enter the URL for the audio file:");
         if (audioUrl) {
-            audioPlayer.src = audioUrl;
-            audioPlayer.play();
+            playAudioFromUrl(audioUrl);
         }
     });
 
     videoFileInput.addEventListener('change', function () {
-        const file = videoFileInput.files[0];
-        const objectURL = URL.createObjectURL(file);
-        videoPlayer.src = objectURL;
-        videoPlayer.play();
+        playVideoFromFile(videoFileInput.files[0]);
     });
 
     videoUrlButton.addEventListener('click', function () {
         const videoUrl = prompt("Enter the URL for the video file:");
         if (videoUrl) {
-            videoPlayer.src = videoUrl;
-            videoPlayer.play();
+            playVideoFromUrl(videoUrl);
         }
     });
 
     youtubeButton.addEventListener('click', function () {
         const youtubeUrl = videoUrlInput.value;
         if (youtubeUrl) {
-            // You may need to integrate a library or API for YouTube video playback.
-            // For simplicity, this example assumes that a library like youtube-iframe-api is included.
-            // Please include the library before using this functionality.
             playYouTubeVideo(youtubeUrl);
         }
     });
 
-    function playYouTubeVideo(youtubeUrl) {
-        // Example using youtube-iframe-api
-        // Make sure to include the library script in your HTML
-        // <script src="https://www.youtube.com/iframe_api"></script>
+    function playAudioFromFile(file) {
+        const objectURL = URL.createObjectURL(file);
+        audioPlayer.src = objectURL;
+        audioPlayer.play();
+    }
 
+    function playAudioFromUrl(audioUrl) {
+        audioPlayer.src = audioUrl;
+        audioPlayer.play();
+    }
+
+    function playVideoFromFile(file) {
+        const objectURL = URL.createObjectURL(file);
+        videoPlayer.src = objectURL;
+        videoPlayer.play();
+    }
+
+    function playVideoFromUrl(videoUrl) {
+        videoPlayer.src = videoUrl;
+        videoPlayer.play();
+    }
+
+    function playYouTubeVideo(youtubeUrl) {
         const videoId = getYouTubeVideoId(youtubeUrl);
 
         if (videoId) {
