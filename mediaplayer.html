@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Media Player</title>
+    <link rel="stylesheet" href="media-player.css">
+</head>
+<body>
+
+<div class="player-container">
+    <div class="audio-player">
+        <h2>Audio Player</h2>
+        <audio controls id="audio-player">
+            <source src="" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <input type="file" id="audio-file-input" accept=".mp3">
+        <button id="audio-url-button">Play from URL</button>
+    </div>
+
+    <div class="video-player">
+        <h2>Video Player</h2>
+        <video controls id="video-player">
+            <source src="" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+        <input type="file" id="video-file-input" accept=".mp4, .webm, .ogg">
+        <button id="video-url-button">Play from URL</button>
+        <input type="text" id="video-url-input" placeholder="Enter YouTube URL">
+        <button id="youtube-button">Play from YouTube</button>
+    </div>
+</div>
+
+<script src="media-player.js"></script>
+
+</body>
+</html>

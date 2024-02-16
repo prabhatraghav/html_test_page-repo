@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.player-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.audio-player,
+.video-player {
+    text-align: center;
+    margin: 20px;
+}
+
+#audio-file-input,
+#video-file-input,
+#video-url-input {
+    margin-top: 10px;
+}
+
+#youtube-button {
+    margin-top: 10px;
+}
